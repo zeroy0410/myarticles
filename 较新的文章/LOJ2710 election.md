@@ -1,3 +1,6 @@
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
 #### 题目
 
 有一个长度为$N$的字符串$S[1…N]$，它仅由`C`和`T`两种字母组成。
