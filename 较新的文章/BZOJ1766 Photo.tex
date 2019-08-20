@@ -1,191 +1,0 @@
-% Options for packages loaded elsewhere
-\PassOptionsToPackage{unicode}{hyperref}
-\PassOptionsToPackage{hyphens}{url}
-%
-\documentclass[
-]{article}
-\usepackage{lmodern}
-\usepackage{amssymb,amsmath}
-\usepackage{ifxetex,ifluatex}
-\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
-  \usepackage[T1]{fontenc}
-  \usepackage[utf8]{inputenc}
-  \usepackage{textcomp} % provide euro and other symbols
-\else % if luatex or xetex
-  \usepackage{unicode-math}
-  \defaultfontfeatures{Scale=MatchLowercase}
-  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
-\fi
-% Use upquote if available, for straight quotes in verbatim environments
-\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
-\IfFileExists{microtype.sty}{% use microtype if available
-  \usepackage[]{microtype}
-  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
-}{}
-\makeatletter
-\@ifundefined{KOMAClassName}{% if non-KOMA class
-  \IfFileExists{parskip.sty}{%
-    \usepackage{parskip}
-  }{% else
-    \setlength{\parindent}{0pt}
-    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
-}{% if KOMA class
-  \KOMAoptions{parskip=half}}
-\makeatother
-\usepackage{xcolor}
-\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
-\hypersetup{
-  hidelinks,
-  pdfcreator={LaTeX via pandoc}}
-\urlstyle{same} % disable monospaced font for URLs
-\usepackage{color}
-\usepackage{fancyvrb}
-\newcommand{\VerbBar}{|}
-\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
-\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
-% Add ',fontsize=\small' for more characters per line
-\newenvironment{Shaded}{}{}
-\newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{#1}}
-\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\BuiltInTok}[1]{#1}
-\newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{#1}}}
-\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{#1}}
-\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{#1}}
-\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{#1}}}
-\newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{#1}}}
-\newcommand{\ExtensionTok}[1]{#1}
-\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{#1}}
-\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{#1}}
-\newcommand{\ImportTok}[1]{#1}
-\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{#1}}}
-\newcommand{\NormalTok}[1]{#1}
-\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{#1}}
-\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{#1}}
-\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{#1}}
-\newcommand{\RegionMarkerTok}[1]{#1}
-\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{#1}}
-\newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{#1}}
-\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{#1}}
-\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{#1}}}}
-\usepackage{graphicx,grffile}
-\makeatletter
-\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
-\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
-\makeatother
-% Scale images if necessary, so that they will not overflow the page
-% margins by default, and it is still possible to overwrite the defaults
-% using explicit options in \includegraphics[width, height, ...]{}
-\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
-% Set default figure placement to htbp
-\makeatletter
-\def\fps@figure{htbp}
-\makeatother
-\setlength{\emergencystretch}{3em} % prevent overfull lines
-\providecommand{\tightlist}{%
-  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
-
-\date{}
-
-\begin{document}
-
-\hypertarget{header-n0}{%
-\paragraph{题目}\label{header-n0}}
-
-平面上有若干个点，现在要求用最少的底边在X轴上且面积小等A的矩形覆盖所有点，这些矩形可以重叠。
-N\textless=100，A\textless=2000000
-
-\hypertarget{header-n4}{%
-\paragraph{思路}\label{header-n4}}
-
-一开始想的是简单的区间dp。
-
-\(f[l,r]\)表示覆盖完\([l,r]\)一段区间的所有点的最小矩形数，然后很快就发现了不对之处：
-
-\begin{figure}
-\centering
-\includegraphics{https://i.loli.net/2019/07/21/5d3418fa286d466847.png}
-\caption{}
-\end{figure}
-
-对于图中所示情况，单纯考虑区间之间的分割是行不通的，也就是说，对于相互重叠的矩形，高度那一维也很有必要记录。
-
-重新定义状态：\(f[i][j][k]\)当\([i,j]\)区间，高度\(>k\)的点被覆盖的最优情况。
-
-接下来考虑从上往下转移：
-
-对于当前区间\([l,r,h]\)，一种方式直接递归转移\([l+1,r,h]+1\)
-
-另外一种方式，直接考虑从\(l\)开始，覆盖一定程度的点到\(j\)，计算出最大能够达到的高度\(mxh\)
-
-那么在\(mxh\)之上的点可以递归处理，式子为\(f[l][j][mxh]+f[j+1][r][h]+1\)。
-
-\hypertarget{header-n14}{%
-\paragraph{代码}\label{header-n14}}
-
-\begin{Shaded}
-\begin{Highlighting}[]
-\PreprocessorTok{#include}\ImportTok{<bits/stdc++.h>}\PreprocessorTok{}
-\KeywordTok{using} \KeywordTok{namespace}\NormalTok{ std;}
-\DataTypeTok{void}\NormalTok{ tomin(}\DataTypeTok{int}\NormalTok{ &x,}\DataTypeTok{int}\NormalTok{ y)\{}\ControlFlowTok{if}\NormalTok{(x>y)x=y;\}}
-\DataTypeTok{void}\NormalTok{ tomax(}\DataTypeTok{int}\NormalTok{ &x,}\DataTypeTok{int}\NormalTok{ y)\{}\ControlFlowTok{if}\NormalTok{(x<y)x=y;\}}
-\KeywordTok{struct}\NormalTok{ node\{}
-    \DataTypeTok{int}\NormalTok{ x,y;}
-    \DataTypeTok{bool} \KeywordTok{operator}\NormalTok{ < (}\AttributeTok{const}\NormalTok{ node& res)}\AttributeTok{const}\NormalTok{\{}
-        \ControlFlowTok{if}\NormalTok{(x!=res.x)}\ControlFlowTok{return}\NormalTok{ x<res.x;}
-        \ControlFlowTok{return}\NormalTok{ y>res.y;  }
-\NormalTok{    \}}
-\NormalTok{\}A[}\DecValTok{105}\NormalTok{];}
-\DataTypeTok{int}\NormalTok{ n,S,f[}\DecValTok{105}\NormalTok{][}\DecValTok{105}\NormalTok{][}\DecValTok{105}\NormalTok{],mx[}\DecValTok{105}\NormalTok{][}\DecValTok{105}\NormalTok{],B[}\DecValTok{105}\NormalTok{],bc;}
-\DataTypeTok{int}\NormalTok{ mp[}\DecValTok{200005}\NormalTok{];}
-\DataTypeTok{int}\NormalTok{ dfs(}\DataTypeTok{int}\NormalTok{ l,}\DataTypeTok{int}\NormalTok{ r,}\DataTypeTok{int}\NormalTok{ h)\{}
-    \ControlFlowTok{if}\NormalTok{(mx[l][r]<=h)}\ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
-    \ControlFlowTok{if}\NormalTok{(l==r)}\ControlFlowTok{return}\NormalTok{ f[l][r][h]=}\DecValTok{1}\NormalTok{;}
-    \ControlFlowTok{if}\NormalTok{(~f[l][r][h])}\ControlFlowTok{return}\NormalTok{ f[l][r][h];}
-    \DataTypeTok{int}\NormalTok{ L=l,R=r;}
-    \ControlFlowTok{while}\NormalTok{(L<=R&&A[L].y<=h)L++;}
-    \ControlFlowTok{while}\NormalTok{(L<=R&&A[R].y<=h)R--;}
-    \DataTypeTok{int}\NormalTok{ &res=f[l][r][h];res=dfs(L+}\DecValTok{1}\NormalTok{,R,h)+}\DecValTok{1}\NormalTok{;}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=L+}\DecValTok{1}\NormalTok{;i<=R;i++)\{}
-        \DataTypeTok{int}\NormalTok{ d=A[i].x-A[L].x;}
-        \DataTypeTok{int}\NormalTok{ mxh=mp[S/d];}
-        \ControlFlowTok{if}\NormalTok{(mxh<=h)}\ControlFlowTok{break}\NormalTok{;}
-\NormalTok{        tomin(res,dfs(L,i,mxh)+dfs(i+}\DecValTok{1}\NormalTok{,R,h)+}\DecValTok{1}\NormalTok{); }
-\NormalTok{    \}}
-    \ControlFlowTok{return}\NormalTok{ res;}
-\NormalTok{\}}
-\DataTypeTok{int}\NormalTok{ main()\{}
-\NormalTok{    memset(f,-}\DecValTok{1}\NormalTok{,}\KeywordTok{sizeof}\NormalTok{(f));}
-\NormalTok{    scanf(}\StringTok{"}\SpecialCharTok{%d%d}\StringTok{"}\NormalTok{,&n,&S);}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{1}\NormalTok{;i<=n;i++)}
-\NormalTok{        scanf(}\StringTok{"}\SpecialCharTok{%d%d}\StringTok{"}\NormalTok{,&A[i].x,&A[i].y),B[++bc]=A[i].y;}
-\NormalTok{    sort(A+}\DecValTok{1}\NormalTok{,A+n+}\DecValTok{1}\NormalTok{);}
-    \DataTypeTok{int}\NormalTok{ len=}\DecValTok{1}\NormalTok{;}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{2}\NormalTok{;i<=n;i++)}
-        \ControlFlowTok{if}\NormalTok{(A[i].x!=A[i-}\DecValTok{1}\NormalTok{].x)A[++len]=A[i];}
-\NormalTok{    n=len;sort(B+}\DecValTok{1}\NormalTok{,B+bc+}\DecValTok{1}\NormalTok{);bc=unique(B+}\DecValTok{1}\NormalTok{,B+bc+}\DecValTok{1}\NormalTok{)-B-}\DecValTok{1}\NormalTok{;}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{1}\NormalTok{;i<=bc;i++)mp[B[i]]=i;}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{1}\NormalTok{;i<=n;i++)}
-\NormalTok{        A[i].y=lower_bound(B+}\DecValTok{1}\NormalTok{,B+bc+}\DecValTok{1}\NormalTok{,A[i].y)-B;}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{1}\NormalTok{;i<=}\DecValTok{200000}\NormalTok{;i++)}
-        \ControlFlowTok{if}\NormalTok{(!mp[i])mp[i]=mp[i-}\DecValTok{1}\NormalTok{];}
-    \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ i=}\DecValTok{1}\NormalTok{;i<=n;i++)}
-        \ControlFlowTok{for}\NormalTok{(}\DataTypeTok{int}\NormalTok{ j=i,res=A[i].y;j<=n;j++)}
-\NormalTok{            tomax(res,A[j].y),mx[i][j]=res; }
-\NormalTok{    printf(}\StringTok{"}\SpecialCharTok{%d\textbackslash{}n}\StringTok{"}\NormalTok{,dfs(}\DecValTok{1}\NormalTok{,n,}\DecValTok{0}\NormalTok{));}
-    \ControlFlowTok{return} \DecValTok{0}\NormalTok{;}
-\NormalTok{\}}
-\end{Highlighting}
-\end{Shaded}
-
-\end{document}
